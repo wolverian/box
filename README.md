@@ -10,7 +10,7 @@
     bar.baz.net: unreachable
     quux.org: available
 
-    $ box identify
+    $ box id
     foo.bar.com: Arch Linux
     bar.baz.net: Ubuntu 12.04 LTS
     quux.org: NetBSD 6.0.1

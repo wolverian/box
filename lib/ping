@@ -1,0 +1,5 @@
+#!/bin/sh
+
+while read host; do
+	ping $host
+done <$box_etc/hosts 

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export box_cmd=$1
+export box_root=$(dirname $0)/..
+export box_lib=$box_root/lib
+export box_etc=$box_root/etc
+
+exec $box_lib/$box_cmd "$@"

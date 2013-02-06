@@ -1,8 +1,8 @@
 # Box is full of boxes
 
-Do you have more than π boxes? Are you constantly forgetting about them? Does
-this sound familiar: “I just *know* I have a Debian box somewhere…”? If you answered
-yes, perhaps Box is for you!
+> I just *know* I have a Debian box somewhere…
+
+Do you have more than π boxes? Are you constantly forgetting about them?
 
 With Box you can easily:
 

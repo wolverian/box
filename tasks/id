@@ -3,4 +3,4 @@
 {
 	echo HOST'	'OS
 	$box_par 'echo {}'\''	'\''$''(ssh {} -- uname -mnrs)' <$box_etc/hosts
-} | column -ts '	'
+} | $box_lib/column

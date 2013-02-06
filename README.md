@@ -8,23 +8,23 @@ With box!, you can easily:
 
 - Keep inventory of your boxes!
 
-    $ box ls
-    foo.bar.com
-    bar.baz.net
-    quux.org
+        $ box ls
+        foo.bar.com
+        bar.baz.net
+        quux.org
 
 - Ping them!
 
-    $ box ping
-    foo.bar.com: available
-    bar.baz.net: unreachable
-    quux.org: available
+        $ box ping
+        foo.bar.com: available
+        bar.baz.net: unreachable
+        quux.org: available
 
 - Remind yourself what you put in those boxes!
 
-    $ box id
-    foo.bar.com: Arch Linux
-    bar.baz.net: Ubuntu 12.04 LTS
-    quux.org: NetBSD 6.0.1
+        $ box id
+        foo.bar.com: Arch Linux
+        bar.baz.net: Ubuntu 12.04 LTS
+        quux.org: NetBSD 6.0.1
 
 All this and more, for the low price of *nothing*! Get box! today!

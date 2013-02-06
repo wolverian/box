@@ -1,10 +1,13 @@
 #!/bin/sh
 
-export box_cmd=$1
-export box_root=$(dirname $0)/..
-export box_tasks=$box_root/tasks
-export box_etc=$box_root/etc
-export box_hosts=$(cat $box_etc/hosts)
-export box_par=parallel
+box_cmd=$1
+box_root=$(dirname $0)/..
+box_tasks=$box_root/tasks
+box_lib=$box_root/lib
+box_etc=$box_root/etc
+IFS= box_hosts=$(cat $box_etc/hosts)
+box_par=parallel
 
-exec $box_tasks/$box_cmd "$@"
+export box_cmd box_root box_tasks box_lib box_etc box_hosts box_par
+
+IFS= exec $box_tasks/$box_cmd "$@"

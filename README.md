@@ -1,7 +1,7 @@
 # box! is full of boxes
 
 Do you have more than π boxes? Are you constantly forgetting about them? Does
-this sound familiar: “Oh yeah, I had a Debian box somewhere…”? If you answered
+this sound familiar: “I just *know* I have a Debian box somewhere…”? If you answered
 yes, perhaps box! is for you!
 
 With box!, you can easily:

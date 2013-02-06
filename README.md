@@ -47,4 +47,16 @@ up.
 At the moment, Box requires [GNU Parallel][]. This dependency might be
 relaxed.
 
+## Getting started
+
+    git clone git@github.com:wolverian/box.git
+    cd box
+    echo user1@host1.com >> etc/hosts
+    echo user2@host2.com >> etc/hosts
+    PATH=bin:$PATH
+    box tasks
+    …
+    box id
+    …
+
 [GNU Parallel]: http://www.gnu.org/software/parallel/

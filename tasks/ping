@@ -2,4 +2,7 @@
 
 IFS=
 
-echo $box_hosts | $box_lib/host | parallel 'echo {} $(ping -q -c 1 -t 3 {} | awk "/packets transmitted/,0")'
+{
+	echo HOST'	'PING
+	echo $box_hosts | $box_lib/host | parallel 'echo {}'\''	'\''$(ping -q -c 1 -t 3 {} | awk "/packets transmitted/,0")'
+} | column -ts '	'

@@ -1,6 +1,6 @@
 #!/bin/sh
 
 {
-	echo HOST OS
-	$box_par 'echo {} $''(ssh {} -- uname)' <$box_etc/hosts
-} | column -t
+	echo HOST'	'OS
+	$box_par 'echo {}'\''	'\''$''(ssh {} -- uname -mnrs)' <$box_etc/hosts
+} | column -ts '	'

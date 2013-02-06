@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+
+cmd=$@
+
+while read line; do
+	(
+	echo $cmd | sed s/{}/$line/g
+	)
+done |
+while read line; do
+	(
+	eval $line 
+	echo "done $?"
+	) &
+done
+
+wait

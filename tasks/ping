@@ -1,10 +1,5 @@
 #!/bin/sh
 
-for box in $box_hosts; do
-	if echo $box | grep -q @; then
-		name=$(echo $box | cut -d@ -f2)
-	else
-		name=$box
-	fi
-	ping -t 3 -c 1 $name
-done
+IFS=
+
+echo $box_hosts | $box_lib/host | parallel 'echo {} $(ping -q -c 1 -t 3 {} | awk "/packets transmitted/,0")'

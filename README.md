@@ -38,7 +38,7 @@ format.
 In the future, Box will likely morph into a (still minimal) configuration
 management system.
 
-## Dependencies
+## Requirements
 
 Box requires a POSIX sh(1) implementation on boxes and on the machine Box is
 run from. Box connects to servers with SSH and assumes that SSH keys are set

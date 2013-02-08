@@ -1,3 +1,4 @@
 #!/bin/sh
+# Identify boxes
 
 $box_tasks/shell uname -mnrs

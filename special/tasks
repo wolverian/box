@@ -1,0 +1,12 @@
+#!/bin/sh
+# List available tasks
+
+for file in $box_tasks/*; do
+	task=$(basename $file)
+	echo $task $(<$box_tasks/$task head -2 | tail -1 | sed 's/#/|/')
+done
+
+for file in $box_special/*; do
+	task=$(basename $file)
+	echo $task $(<$box_special/$task head -2 | tail -1 | sed 's/#/|/')
+done

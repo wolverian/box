@@ -1,3 +1,4 @@
 #!/bin/sh
+# Execute a shell line on boxes
 
 $box_lib/result "$box_lib/remote {} -- $@"

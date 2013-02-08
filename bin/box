@@ -5,17 +5,20 @@ me=$0
 
 box_cmd=$1
 box_root=$(dirname $me)/..
+box_special=$box_root/special
 box_tasks=$box_root/tasks
 box_lib=$box_root/lib
 box_etc=$box_root/etc
 box_par=parallel
 
-export box_cmd box_root box_tasks box_lib box_etc box_hosts box_par
+export box_cmd box_root box_tasks box_lib box_etc box_hosts box_par box_special
 
-[ -f $box_tasks/$box_cmd ] || {
+if [ -f $box_special/$box_cmd ]; then
+	$box_special/$box_cmd $2 $3 $4
+elif [ ! -f $box_tasks/$box_cmd ]; then
 	echo >&2 "No such task '$box_cmd'. Available tasks:"
 	$me tasks >&2
 	exit 1
-}
-
-$box_par "echo {} | $box_tasks/$box_cmd $2 $3 $4" <$box_etc/hosts
+else
+	$box_par "echo {} | $box_tasks/$box_cmd $2 $3 $4" <$box_etc/hosts
+fi

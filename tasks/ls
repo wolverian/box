@@ -1,3 +1,4 @@
 #!/bin/sh
+# List configured boxes
 
 cat $box_etc/hosts

@@ -1,3 +1,4 @@
 #!/bin/sh
+# Ping boxes
 
 $box_lib/host | $box_lib/result 'ping -q -c 1 -t 3 {} | awk "/packets transmitted/",0'

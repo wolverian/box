@@ -1,3 +1,4 @@
 #!/bin/sh
+# Show uptimes and loads
 
 $box_tasks/shell uptime

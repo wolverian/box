@@ -13,4 +13,10 @@ box_par=parallel
 
 export box_cmd box_root box_tasks box_lib box_etc box_hosts box_par
 
+[ -f $box_tasks/$box_cmd ] || {
+	echo >&2 "No such task '$box_cmd'. Available tasks:"
+	$me tasks >&2
+	exit 1
+}
+
 IFS= exec $box_tasks/$box_cmd "$@"

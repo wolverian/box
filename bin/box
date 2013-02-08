@@ -19,4 +19,4 @@ export box_cmd box_root box_tasks box_lib box_etc box_hosts box_par
 	exit 1
 }
 
-IFS= exec $box_tasks/$box_cmd "$@"
+IFS= exec $box_tasks/$box_cmd "$2" "$3" "$4" "$5" "$6" "$7" "$8" 

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+$box_par echo '{}' '\|' '$(ssh {} -- '"$@"')' <$box_etc/hosts 

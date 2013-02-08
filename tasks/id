@@ -1,6 +1,3 @@
 #!/bin/sh
 
-{
-	echo HOST'	'OS
-	$box_par 'echo {}'\''	'\''$''(ssh {} -- uname -mnrs)' <$box_etc/hosts
-} | $box_lib/column
+$box_tasks/shell uname -mnrs

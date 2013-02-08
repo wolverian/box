@@ -1,0 +1,3 @@
+#!/bin/sh
+
+$box_tasks/shell uptime

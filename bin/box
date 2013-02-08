@@ -1,7 +1,10 @@
 #!/bin/sh
 
+me=$0
+[ -L $me ] && me=$(readlink $me)
+
 box_cmd=$1
-box_root=$(dirname $0)/..
+box_root=$(dirname $me)/..
 box_tasks=$box_root/tasks
 box_lib=$box_root/lib
 box_etc=$box_root/etc

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+read host
+cmd=$(echo $@ | sed s/{}/$host/g)
+echo $host \| $(eval $cmd)

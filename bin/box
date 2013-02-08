@@ -8,7 +8,6 @@ box_root=$(dirname $me)/..
 box_tasks=$box_root/tasks
 box_lib=$box_root/lib
 box_etc=$box_root/etc
-IFS= box_hosts=$(cat $box_etc/hosts)
 box_par=parallel
 
 export box_cmd box_root box_tasks box_lib box_etc box_hosts box_par
@@ -19,4 +18,4 @@ export box_cmd box_root box_tasks box_lib box_etc box_hosts box_par
 	exit 1
 }
 
-IFS= exec $box_tasks/$box_cmd "$2" "$3" "$4" "$5" "$6" "$7" "$8" 
+$box_par "echo {} | $box_tasks/$box_cmd $2 $3 $4" <$box_etc/hosts

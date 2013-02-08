@@ -1,4 +1,4 @@
 #!/bin/sh
 
 read host
-echo $host \| $(eval $(echo $@ | sed s/{}/$host/g))
+echo $(echo $host | $box_lib/host) \| $(eval $(echo $@ | sed s/{}/$host/g))

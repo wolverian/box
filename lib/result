@@ -1,5 +1,4 @@
 #!/bin/sh
 
 read host
-cmd=$(echo $@ | sed s/{}/$host/g)
-echo $host \| $(eval $cmd)
+echo $host \| $(eval $(echo $@ | sed s/{}/$host/g))

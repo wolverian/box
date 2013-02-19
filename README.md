@@ -41,8 +41,8 @@ management system.
 ## Who Box is for
 
 Box is designed for managing at most 20 boxes. If you have a large deployment
-to manage, we recommend that you check out larger tools like [Ansible],
- [Salt Stack], [Chef] or [Puppet] (in roughly increasing order of complexity).
+to manage, we recommend that you check out larger tools like [Ansible][],
+ [Salt Stack][], [Chef][] or [Puppet][] (in roughly increasing order of complexity).
 
 ## Requirements
 

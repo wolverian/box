@@ -35,6 +35,8 @@ Box is a remote command execution program. Box allows you to run commands on
 all of your remote servers and presents the produced results in a readable
 format.
 
+Box is liberally licensed with the [ISC license][].
+
 In the future, Box will likely morph into a (still minimal) configuration
 management system.
 
@@ -67,3 +69,4 @@ up.
 [Chef]: http://www.opscode.com/chef/
 [Puppet]: https://puppetlabs.com
 [Ansible]: http://ansible.cc
+[ISC license]: LICENSE

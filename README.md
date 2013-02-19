@@ -63,7 +63,7 @@ up.
     …
 
 [GNU Parallel]: http://www.gnu.org/software/parallel/
-[Salt]: http://saltstack.org
+[Salt Stack]: http://saltstack.org
 [Chef]: http://www.opscode.com/chef/
 [Puppet]: https://puppetlabs.com
 [Ansible]: http://ansible.cc

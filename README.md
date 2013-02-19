@@ -38,14 +38,17 @@ format.
 In the future, Box will likely morph into a (still minimal) configuration
 management system.
 
+## Who Box is for
+
+Box is designed for managing at most 20 boxes. If you have a large deployment
+to manage, we recommend that you check out larger tools like [Ansible],
+ [Salt Stack], [Chef] or [Puppet] (in roughly increasing order of complexity).
+
 ## Requirements
 
 Box requires a POSIX sh(1) implementation on boxes and on the machine Box is
 run from. Box connects to servers with SSH and assumes that SSH keys are set
 up.
-
-At the moment, Box requires [GNU Parallel][]. This dependency might be
-relaxed.
 
 ## Getting started
 
@@ -60,3 +63,7 @@ relaxed.
     …
 
 [GNU Parallel]: http://www.gnu.org/software/parallel/
+[Salt]: http://saltstack.org
+[Chef]: http://www.opscode.com/chef/
+[Puppet]: https://puppetlabs.com
+[Ansible]: http://ansible.cc

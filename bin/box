@@ -9,7 +9,7 @@ box_special=$box_root/special
 box_tasks=$box_root/tasks
 box_lib=$box_root/lib
 box_etc=$box_root/etc
-box_par=parallel
+box_par=$box_lib/par
 
 export box_cmd box_root box_tasks box_lib box_etc box_hosts box_par box_special
 

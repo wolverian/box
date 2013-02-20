@@ -6,53 +6,54 @@ Do you have more than π boxes? Are you constantly forgetting about them?
 
 With Box you can easily:
 
-- Keep inventory of your boxes!
+- Keep inventory of your boxes:
 
         $ box ls
-        foo.bar.com
-        bar.baz.net
-        quux.org
+        me@foo.bar.com
+        i@bar.baz.net
+        myself@quux.org
 
-- Ping them!
+- Check if they're up:
 
-        $ box ping
-        foo.bar.com: available
-        bar.baz.net: unreachable
-        quux.org: available
+        $ box uptime
+        me@foo.bar.com | 15:29:49 up 24 days, 3:07, 2 users, load average: 0.00, 0.01, 0.05
+        i@bar.baz.net | 3:29PM up 17 days, 3:31, 1 user, load averages: 0.20, 0.14, 0.09
+        myself@quux.org | 3:29PM up 42 days, 1:44, 15 users, load averages: 1.30, 1.94, 1.88
 
-- Remind yourself what you put in those boxes!
+- Remind yourself what you put in those boxes:
 
         $ box id
-        foo.bar.com: Arch Linux
-        bar.baz.net: Ubuntu 12.04 LTS
-        quux.org: NetBSD 6.0.1
+        me@foo.bar.com | Linux foo 3.5.0-17-generic i686
+        i@bar.baz.net | NetBSD bar 6.0.1 amd64
+        myself@quux.org | Linux quux 2.6.34-generic amd64
 
 All this and more, for the low price of *nothing*! Get Box today!
 
 ## Overview
 
 Box is a remote command execution program. Box allows you to run commands on
-all of your remote servers and presents the produced results in a readable
-format.
+all of your servers and presents the produced results in a readable format.
 
 Box is liberally licensed with the [ISC license][].
 
-In the future, Box will likely morph into a (still minimal) configuration
-management system.
+In the future, Box will likely morph into a minimal configuration management
+system.
 
 ## Who Box is for
 
-Box is designed for managing at most 20 boxes. If you have a large deployment
-to manage, we recommend that you check out larger tools like [Ansible][],
- [Salt Stack][], [Chef][] or [Puppet][] (in roughly increasing order of complexity).
+Box is designed for managing at most twentyish boxes. If you have a larger
+deployment, we recommend that you use tools like [Ansible][], [Salt Stack][],
+[Chef][] or [Puppet][] (in roughly increasing order of complexity).
 
 ## Requirements
 
-Box requires a POSIX sh(1) implementation on boxes and on the machine Box is
-run from. Box connects to servers with SSH and assumes that SSH keys are set
-up.
+- A POSIX `/bin/sh` implementation on boxes and on the controlling machine.
+- Access to boxes with an SSH key.
 
 ## Getting started
+
+Box doesn't have a an installation method yet. You can run it easily from a
+Git clone, though:
 
     git clone git@github.com:wolverian/box.git
     cd box

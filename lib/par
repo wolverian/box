@@ -10,7 +10,6 @@ done |
 while read line; do
 	(
 	eval $line 
-	echo "done $?"
 	) &
 done
 

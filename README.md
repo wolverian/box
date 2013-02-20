@@ -49,6 +49,7 @@ deployment, we recommend that you use tools like [Ansible][], [Salt Stack][],
 
 - A POSIX `/bin/sh` implementation on boxes and on the controlling machine.
 - Access to boxes with an SSH key.
+- Box runs commands in parallel on each box if [GNU Parallel] is installed.
 
 ## Getting started
 

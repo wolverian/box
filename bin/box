@@ -11,6 +11,12 @@ export box_lib=$box_root/lib
 export box_etc=$box_root/etc
 export box_par=$box_lib/par
 
+[ -f $box_etc/hosts ] || {
+	echo >&2 "Hosts file not found at '$(cd $box_etc; pwd)/hosts'."
+	echo >&2 "Help is available at:\nhttps://github.com/wolverian/box#getting-started"
+	exit 1
+}
+
 if [ -f $box_special/$box_cmd ]; then
 	$box_special/$box_cmd $2 $3 $4
 elif [ -f $box_tasks/$box_cmd ]; then

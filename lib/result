@@ -1,4 +1,23 @@
 #!/bin/sh
 
 read host
-echo $(echo $host | $box_lib/host) \| $(eval $(echo $@ | sed s/{}/$host/g) 2>&1)
+output=$(eval 2>&1 $(echo $@ | sed s/{}/$host/g))
+status=$?
+
+prefix="$(echo $host | $box_lib/host)"
+infix="|"
+
+fg_red=
+fg_green=
+
+[ $box_stdout_is_terminal -eq 0 ] && {
+	fg_reset=$(tput sgr0)
+	fg_red=$(tput setaf 1)
+	fg_green=$(tput setaf 2)
+}
+
+if [ $status -eq 0 ]; then
+	echo $fg_green$prefix$fg_reset $infix $output
+else
+	echo $fg_red$prefix$fg_reset $infix $output
+fi

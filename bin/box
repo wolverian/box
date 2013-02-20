@@ -15,10 +15,10 @@ export box_cmd box_root box_tasks box_lib box_etc box_hosts box_par box_special
 
 if [ -f $box_special/$box_cmd ]; then
 	$box_special/$box_cmd $2 $3 $4
-elif [ ! -f $box_tasks/$box_cmd ]; then
+elif [ -f $box_tasks/$box_cmd ]; then
+	$box_par "echo {} | $box_tasks/$box_cmd $2 $3 $4" <$box_etc/hosts		
+else
 	echo >&2 "No such task '$box_cmd'. Available tasks:"
 	$me tasks >&2
 	exit 1
-else
-	$box_par "echo {} | $box_tasks/$box_cmd $2 $3 $4" <$box_etc/hosts
 fi

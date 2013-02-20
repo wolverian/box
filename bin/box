@@ -3,15 +3,13 @@
 me=$0
 [ -L $me ] && me=$(readlink $me)
 
-box_cmd=$1
-box_root=$(dirname $me)/..
-box_special=$box_root/special
-box_tasks=$box_root/tasks
-box_lib=$box_root/lib
-box_etc=$box_root/etc
-box_par=$box_lib/par
-
-export box_cmd box_root box_tasks box_lib box_etc box_hosts box_par box_special
+export box_cmd=$1
+export box_root=$(dirname $me)/..
+export box_special=$box_root/special
+export box_tasks=$box_root/tasks
+export box_lib=$box_root/lib
+export box_etc=$box_root/etc
+export box_par=$box_lib/par
 
 if [ -f $box_special/$box_cmd ]; then
 	$box_special/$box_cmd $2 $3 $4

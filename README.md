@@ -2,6 +2,8 @@
 
 > I just *know* I have a Debian box somewhere…
 
+![Box in action](screenshot.png)
+
 Do you have more than π boxes? Are you constantly forgetting about them?
 
 With Box you can easily:

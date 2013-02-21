@@ -22,7 +22,7 @@ export box_stdout_is_terminal=$?
 if [ -f $box_special/$box_cmd ]; then
 	$box_special/$box_cmd $2 $3 $4
 elif [ -f $box_tasks/$box_cmd ]; then
-	$box_par "echo {} | $box_tasks/$box_cmd $@" <$box_etc/hosts		
+	$box_par "echo {} | $box_tasks/$box_cmd $2 $3 $4" <$box_etc/hosts		
 else
 	echo >&2 "No such task '$box_cmd'. Available tasks:"
 	$me tasks >&2

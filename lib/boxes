@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sed 's/#.*$//;/^[[:space:]]*$/d' $box_etc/hosts 

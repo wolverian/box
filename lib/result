@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -o pipefail
 
 read host
 output=$(eval 2>&1 $(echo $@ | sed s/{}/$host/g))

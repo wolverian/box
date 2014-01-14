@@ -68,6 +68,12 @@ Git clone, though:
     box id
     …
 
+## Troubleshooting
+
+### I can't enter my server password
+
+Box requires that you use SSH keys for authentication.
+
 [GNU Parallel]: http://www.gnu.org/software/parallel/
 [Salt Stack]: http://saltstack.org
 [Chef]: http://www.opscode.com/chef/
